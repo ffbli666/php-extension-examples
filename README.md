@@ -6,5 +6,6 @@ cd swap
 phpize
 ./configure --enable-swap
 make 
+make test
 make install
 ```
