@@ -1,5 +1,5 @@
 --TEST--
-Check swap array
+Check swap array element
 --FILE--
 <?php
 $a = array(1,2,3);

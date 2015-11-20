@@ -1,5 +1,5 @@
 --TEST--
-Check swap variable
+Check swap object
 --FILE--
 <?php
 class Party {
