@@ -11,7 +11,7 @@
 
 extern zend_module_entry mysort_module_entry;
 
-void _swap(zval *za, zval *zb);
+static void _swap(zval *za, zval *zb);
 PHP_FUNCTION(swap);
 PHP_FUNCTION(mysort);
 

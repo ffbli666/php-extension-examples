@@ -23,7 +23,7 @@ zend_module_entry mysort_module_entry = {
   STANDARD_MODULE_PROPERTIES
 };
 
-void _swap(zval *za, zval *zb) {
+static void _swap(zval *za, zval *zb) {
     zval tmp = *za;
     *za = *zb;
     *zb = tmp;
