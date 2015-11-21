@@ -9,3 +9,12 @@ make
 make test
 make install
 ```
+## mysort
+```sh
+cd mysort
+phpize
+./configure --enable-mysort
+make 
+make test
+make install
+```
