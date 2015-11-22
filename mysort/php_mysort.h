@@ -1,19 +1,18 @@
 #ifndef _PHP_MYSORT_H
-  #define _PHP_MYSORT_H
-  #ifdef HAVE_CONFIG_H
-  #include "config.h"
-#endif
-#ifdef ZTS
-  #include <TSRM.h>
-#endif
+    #define _PHP_MYSORT_H
+    #ifdef HAVE_CONFIG_H
+        #include "config.h"
+    #endif
+    #ifdef ZTS
+        #include <TSRM.h>
+    #endif
 
-#include <php.h>
+    #include <php.h>
 
-extern zend_module_entry mysort_module_entry;
+    extern zend_module_entry mysort_module_entry;
 
-static void _swap(zval *za, zval *zb);
-PHP_FUNCTION(swap);
-PHP_FUNCTION(mysort);
-
-
+    static void _swap(zval *za, zval *zb);
+    PHP_FUNCTION(swap);
+    PHP_FUNCTION(mysort);
+    PHP_FUNCTION(myarray_sum);
 #endif
