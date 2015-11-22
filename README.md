@@ -18,3 +18,12 @@ make
 make test
 make install
 ```
+## myclass
+```sh
+cd myclass
+phpize
+./configure --enable-myclass
+make 
+make test
+make install
+```
