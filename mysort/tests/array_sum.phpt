@@ -1,6 +1,5 @@
 --TEST--
-Check sort int
---FILE--
+Check array_sum
 <?php
 $a = array(1,2,3,4,5);
 echo myarray_sum($a);

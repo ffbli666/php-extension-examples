@@ -9,13 +9,10 @@
     http://www.kchodorow.com/blog/2011/08/11/php-extensions-made-eldrich-classes/
     http://www.walu.cc/phpbook/preface.md
  */
-zend_class_entry *myclass_ce;
 
-//ZEND_BEGIN_ARG_INFO_EX(arginfo_void, 0, 0, 0)
-//ZEND_END_ARG_INFO()
+zend_class_entry *myclass_ce;
 /*
     flag have ZEND_ACC_PUBLIC, ZEND_ACC_PROTECTED, ZEND_ACC_PRIVATE, ZEND_ACC_STATIC, ZEND_ACC_FINAL and ZEND_ACC_ABSTRACT
-    PHP_ABSTRACT_ME(Test, abstractMethod, arginfo_abc)
  */
 static const zend_function_entry myclass_functions[] = {
     PHP_ME(MyClass, __construct,        NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
@@ -59,12 +56,12 @@ PHP_METHOD(MyClass, __construct)
 
 PHP_METHOD(MyClass, getName)
 {
-    zval *str = NULL;
+    zval *name = NULL;
     if (zend_parse_parameters_none() == FAILURE) {
         RETURN_FALSE;
     }
-    str = zend_read_property(myclass_ce, getThis(), "name", sizeof("name") - 1, 1 TSRMLS_CC);
-    RETURN_STRING(Z_STRVAL_P(str), 1);
+    name = zend_read_property(myclass_ce, getThis(), "name", sizeof("name") - 1, 1 TSRMLS_CC);
+    RETURN_STRING(Z_STRVAL_P(name), 1);
 }
 
 PHP_METHOD(MyClass, setName)
@@ -83,6 +80,6 @@ PHP_METHOD(MyClass, helloWorld)
         RETURN_FALSE;
     }
 
-    RETURN_STRING("Hello World\n", 1);
+    RETURN_STRING("Hello World", 1);
 }
 
